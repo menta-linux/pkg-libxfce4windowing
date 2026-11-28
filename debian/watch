@@ -1,0 +1,4 @@
+Version: 5
+
+Source: https://archive.xfce.org/src/xfce/@PACKAGE@/(\d[\d\.]+)/
+Matching-Pattern: @PACKAGE@@ANY_VERSION@@ARCHIVE_EXT@

@@ -1,0 +1,90 @@
+Source: libxfce4windowing
+Priority: optional
+Section: xfce
+Maintainer: Debian Xfce Maintainers <debian-xfce@lists.debian.org>
+Uploaders: Yves-Alexis Perez <corsac@debian.org>, Unit 193 <unit193@debian.org>
+Build-Depends: debhelper-compat (= 13),
+               gettext,
+               gir1.2-gio-2.0-dev,
+               gir1.2-gobject-2.0-dev,
+               gir1.2-gtk-3.0-dev,
+               gobject-introspection (>= 1.80),
+               gtk-doc-tools,
+               libdisplay-info-dev,
+               libglib2.0-dev,
+               libgtk-3-dev,
+               libwayland-dev [linux-any],
+               libwnck-3-dev,
+               libxrandr-dev,
+               wayland-protocols [linux-any],
+               xfce4-dev-tools (>= 4.19.3)
+Rules-Requires-Root: no
+Standards-Version: 4.7.0
+Homepage: https://docs.xfce.org/xfce/libxfce4windowing/start
+Vcs-Git: https://salsa.debian.org/xfce-team/desktop/libxfce4windowing.git
+Vcs-Browser: https://salsa.debian.org/xfce-team/desktop/libxfce4windowing
+
+Package: libxfce4windowing-0-0
+Section: libs
+Architecture: any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}, libxfce4windowing-common
+Breaks: budgie-core (<< 10.9.2-4~), xfce4-panel (<< 4.19.5~), xfdesktop4 (<< 4.19.5~)
+Description: Wayland utility functions library for Xfce4
+ an abstraction library that attempts to present windowing concepts (screens,
+ toplevel windows, workspaces, etc.) in a windowing-system-independent manner.
+
+Package: libxfce4windowing-0-dev
+Architecture: any
+Multi-Arch: same
+Section: libdevel
+Depends: ${misc:Depends},
+         ${gir:Depends},
+         gir1.2-libxfce4windowing-0.0 (= ${binary:Version}),
+         gir1.2-libxfce4windowingui-0.0 (= ${binary:Version}),
+         libgtk-3-dev,
+         libwayland-dev [linux-any],
+         libxfce4windowing-0-0 (= ${binary:Version}),
+Provides: ${gir:Provides}
+Description: Development files for libxfce4windowing
+ This package contains the headers for libxfce4windowing. If you intend to code
+ wayland applications for the Xfce4 desktop environment, you need to install
+ this package.
+ .
+ The libxfce4windowing Reference Manual is also included and
+ it can be consulted using Devhelp or a web browser.
+
+Package: gir1.2-libxfce4windowing-0.0
+Section: introspection
+Architecture: any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${gir:Depends}, ${misc:Depends}
+Description: Typelib file for libxfce4windowing
+ This package contains the headers for libxfce4windowing. If you intend to code
+ wayland applications for the Xfce4 desktop environment, you need to install
+ this package.
+ .
+ This package provides the introspection data for libxfce4windowing.
+
+Package: gir1.2-libxfce4windowingui-0.0
+Section: introspection
+Architecture: any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${gir:Depends}, ${misc:Depends}
+Description: Typelib file for libxfce4windowingui
+ This package contains the headers for libxfce4windowing. If you intend to code
+ wayland applications for the Xfce4 desktop environment, you need to install
+ this package.
+ .
+ This package provides the introspection data for libxfce4windowingui.
+
+Package: libxfce4windowing-common
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends}
+Description: common files for libxfce4windowing
+ This package contains various architecture-independent common files for
+ libxfce4windowing, the Xfce windowing concepts abstraction library.

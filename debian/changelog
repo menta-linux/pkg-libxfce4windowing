@@ -1,0 +1,105 @@
+libxfce4windowing (4.20.7-1menta1) unstable; urgency=medium
+
+  * Menta build: Wayland and X11 support explicitly required (configure
+    fails instead of skipping); CI for unstable and trixie.
+
+ -- Menta Linux <packages@menta-linux.invalid>  Sun, 22 Nov 2026 20:53:25 -0700
+
+libxfce4windowing (4.20.7-1) unstable; urgency=medium
+
+  * d/watch updated to v5 format
+  * New upstream version 4.20.7
+  * d/libxfce4windowing-0-0.symbols updated for new release
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Tue, 11 Aug 2026 18:47:59 +0200
+
+libxfce4windowing (4.20.6-1) unstable; urgency=medium
+
+  * New upstream version 4.20.6
+  * d/libxfce4windowing-0-0.symbols updated for new release
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Mon, 25 May 2026 18:45:44 +0200
+
+libxfce4windowing (4.20.5-1) unstable; urgency=medium
+
+  * New upstream version 4.20.5
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Tue, 30 Dec 2025 11:33:58 +0100
+
+libxfce4windowing (4.20.4-1) unstable; urgency=medium
+
+  * New upstream version 4.20.4
+  * d/control: drop obsolete libgirepository1.0-dev b-dep
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Tue, 16 Sep 2025 12:06:51 +0200
+
+libxfce4windowing (4.20.3-1) unstable; urgency=medium
+
+  * New upstream version 4.20.3
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Fri, 18 Jul 2025 18:17:12 +0200
+
+libxfce4windowing (4.20.2-1) unstable; urgency=medium
+
+  [ Pino Toscano ]
+  * Build on non-Linux archs by disabling Wayland:
+    - d/control: restrict the libwayland-dev, and wayland-protocols B-Ds as
+      linux-any
+    - d/control: restrict the libwayland-dev dependency in
+      libxfce4windowing-0-dev as linux-any
+    - d/rules: pass --disable-wayland instead of --enable-wayland on
+      non-Linux archs
+
+  [ Unit 193 ]
+  * New upstream version 4.20.2.
+
+ -- Unit 193 <unit193@debian.org>  Tue, 04 Feb 2025 01:01:17 -0500
+
+libxfce4windowing (4.20.0-1) unstable; urgency=medium
+
+  * New upstream version 4.20.0
+  * Upload to unstable
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Wed, 18 Dec 2024 20:38:10 +0100
+
+libxfce4windowing (4.19.10-1) experimental; urgency=medium
+
+  [ Mateusz Łukasik ]
+  * New upstream version 4.19.9.
+    - Update symbols.
+  * d/control: Bump xfce4-dev-tools B-D to 4.19.4
+
+  [ Unit 193 ]
+  * New upstream version 4.19.10.
+  * d/control:
+    - Add associated breaks due to symbol changes.
+    - Correct xfce4-dev-tools B-D to 4.19.3.
+
+ -- Unit 193 <unit193@debian.org>  Mon, 02 Dec 2024 01:35:14 -0500
+
+libxfce4windowing (4.19.4-1) experimental; urgency=medium
+
+  * New upstream version 4.19.4.
+    - Update symbols.
+  * d/control:
+    - Add gir annotations.
+    - B-D on libdisplay-info-dev, libxrandr-dev, wayland-protocols.
+  * d/copyright: Bump years.
+  * d/rules: Explicitly enable wayland and x11 backends.
+  * Update Standards-Version to 4.7.0.
+
+ -- Unit 193 <unit193@debian.org>  Tue, 27 Aug 2024 21:49:54 -0400
+
+libxfce4windowing (4.19.3-1) experimental; urgency=medium
+
+  * New upstream version 4.19.3.
+  * d/control: Lower xfce4-dev-tools B-D to 4.18.1.
+  * d/libxfce4windowing-0-0.symbols: Update symbols for new release.
+
+ -- Unit 193 <unit193@debian.org>  Mon, 11 Mar 2024 16:37:54 -0400
+
+libxfce4windowing (4.19.2-1) experimental; urgency=medium
+
+  * Initial upload.
+
+ -- Unit 193 <unit193@debian.org>  Tue, 04 Jul 2023 04:29:31 -0400
