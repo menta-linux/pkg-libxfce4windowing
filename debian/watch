@@ -1,4 +1,3 @@
-Version: 5
-
-Source: https://archive.xfce.org/src/xfce/@PACKAGE@/(\d[\d\.]+)/
-Matching-Pattern: @PACKAGE@@ANY_VERSION@@ARCHIVE_EXT@
+version=4
+# Xfce publishes releases as archive.xfce.org/src/xfce/<name>/<major.minor>/<name>-<version>.tar.{xz,bz2}.
+https://archive.xfce.org/src/xfce/libxfce4windowing/@ANY_VERSION@/ libxfce4windowing-@ANY_VERSION@@ARCHIVE_EXT@
